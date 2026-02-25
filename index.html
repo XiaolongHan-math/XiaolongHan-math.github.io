@@ -1,71 +1,233 @@
-<title>Xiaolong Han. Mathematics</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiaolong Han | Mathematics</title>
 
-<center><table align="center" width="800"><tr><td>
-<img src="Autumn 2024.jpeg" alt="Autumn 2024" style="display:block; margin: 0 auto; width: 800px; height: auto;">
-<h2>Xiaolong Han's homepage</h2> 
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --text: #222;
+      --card: #ffffff;
+      --border: #eee;
+      --link: #1a73e8;
+      --shadow: rgba(0,0,0,0.08);
+      --button-bg: #1a73e8;
+      --button-text: #ffffff;
+    }
 
+    body.dark {
+      --bg: #0f1115;
+      --text: #e6e6e6;
+      --card: #1a1d24;
+      --border: #2a2f3a;
+      --link: #4ea1ff;
+      --shadow: rgba(0,0,0,0.4);
+      --button-bg: #4ea1ff;
+      --button-text: #0f1115;
+    }
 
-<p>
-  I have been an undergraduate student at <a href="https://math.sustech.edu.cn/?lang=en" target="_blank"> Southern University of Science and Technology</a> (SUSTech) in Shenzhen, 
-  China since 2023. My academic tutor is <a href="https://yifeizhu.github.io" target="_blank"> Yifei Zhu</a>.
-</p>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
 
-<p>
-  My research interests include algebraic topology, Lie theory, topological data analysis, and stochastic analysis. 
-</p>
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
 
-<p><a href="https://xiaolonghan-math.github.io/cv.pdf" target="_blank">Vita</a></p>
+    a:hover {
+      text-decoration: underline;
+    }
 
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--card);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px var(--shadow);
+      transition: background 0.3s;
+    }
 
-<p>Email: <a href="mailto:12313305@mail.sustech.edu.cn">12313305@mail.sustech.edu.cn</a></p>
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
 
+    header img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-<h3>Papers</h3>
-¯\_(ツ)_/¯
+    h1 {
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
 
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
 
+    .section {
+      margin-top: 20px;
+    }
 
-<h3>Presentations</h3>
+    .item {
+      margin-bottom: 15px;
+    }
 
-<p>
-  <a href="BorromeanRings.pdf" target="_blank">Borromean Rings are Non-splittable. </a> This work introduces a few ways to calculate knot groups.  
-  2025 November, Jilin University, Changchun
-</p>
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
 
-<h3>Summer School</h3>
-<p>
-  <a href="https://math.ucas.ac.cn/index.php/zh-CN/news/3179-2025" target="_blank">Sino French Mathematics Summer School for College Students</a>, 
-  2025 July - August, University of Chinese Academy of Science, Beijing. 
-</p>
+    .email {
+      margin-top: 10px;
+    }
 
-<h3>Academic Works</h3>
-<p>
-  <a href="Stochastic Process.pdf" target="_blank">Lecture notes</a> of MAT7092 Stochastic Process supervised by <a href="mailto:yuanwj3@mail.sustech.edu.cn">Wangjun Yuan</a>. 
-</p>
-<p>
- <a href="Project_TDA.pdf" target="_blank">Final project </a> of <a href="https://yifeizhu.github.io/341/">MA341</a> Applied and Computational Topology, supervised by <a href="mailto:zhuyf@mail.sustech.edu.cn">Yifei Zhu</a>. This work used toppological data analysis, especially persistent homology to analyze four baroque concertos composed by Bach, Vivaldi.
-</p>
+    .vita {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border-radius: 6px;
+      font-size: 14px;
+    }
 
-<p>
-  <a href="mailto:231250101@smail.nju.edu.cn" target="_blank">Shuo Gao </a> from NJU is the co-worker for constructing this website.
-</p>
+    .vita:hover {
+      opacity: 0.9;
+    }
 
-<p></p>
+    .theme-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      background: var(--button-bg);
+      color: var(--button-text);
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  </style>
+</head>
 
-</td></tr></table></center>
+<body>
 
+<div class="container">
 
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+    <img src="Autumn 2024.jpeg" alt="Autumn 2024">
+    <h1>Xiaolong Han</h1>
+    <div>Mathematics Undergraduate</div>
+    <div class="email">
+      Email: <a href="mailto:12313305@mail.sustech.edu.cn">12313305@mail.sustech.edu.cn</a>
+    </div>
+    <a class="vita" href="https://xiaolonghan-math.github.io/cv.pdf" target="_blank">Curriculum Vitae</a>
+  </header>
 
+  <section class="section">
+    <p>
+      I am an undergraduate student at 
+      <a href="https://math.sustech.edu.cn/?lang=en" target="_blank">
+        Southern University of Science and Technology (SUSTech)
+      </a>, Shenzhen, China since 2023. 
+      My academic tutor is 
+      <a href="https://yifeizhu.github.io" target="_blank">Yifei Zhu</a>.
+    </p>
 
+    <p>
+      My GPA is 3.90/4.00, ranked 5/100 in the department of Mathematics. 
+      My research interests include topological data analysis, and stochastic process.
+      Currently I am learning algebraic topology, Lie theory and stochastic analysis.
+    </p>
+  </section>
 
+  <section class="section">
+    <h2>Papers</h2>
+    <p>¯\_(ツ)_/¯</p>
+  </section>
 
+  <section class="section">
+    <h2>Presentations</h2>
+    <div class="item">
+      <a href="BorromeanRings.pdf" target="_blank">
+        Borromean Rings are Non-splittable
+      </a>. 
+      This work introduces a few ways to calculate knot groups.  
+      <br>
+      2025 November, Jilin University, Changchun
+    </div>
+  </section>
 
+  <section class="section">
+    <h2>Summer School</h2>
+    <div class="item">
+      <a href="https://math.ucas.ac.cn/index.php/zh-CN/news/3179-2025" target="_blank">
+        Sino French Mathematics Summer School for College Students
+      </a>, 
+      2025 July - August, University of Chinese Academy of Science, Beijing.
+    </div>
+  </section>
 
+  <section class="section">
+    <h2>Academic Works</h2>
 
+    <div class="item">
+      <a href="Stochastic Process.pdf" target="_blank">Lecture notes</a> 
+      of MAT7092 Stochastic Process supervised by 
+      <a href="mailto:yuanwj3@mail.sustech.edu.cn">Wangjun Yuan</a>.
+    </div>
 
+    <div class="item">
+      <a href="Project_TDA.pdf" target="_blank">Final project</a> 
+      of <a href="https://yifeizhu.github.io/341/">MA341</a> Applied and Computational Topology, 
+      supervised by <a href="mailto:zhuyf@mail.sustech.edu.cn">Yifei Zhu</a>. 
+      This work used topological data analysis, especially persistent homology 
+      to analyze four baroque concertos composed by Bach and Vivaldi.
+    </div>
+  </section>
 
+  <footer>
+    Website co-developed with 
+    <a href="mailto:231250101@smail.nju.edu.cn">Shuo Gao</a>.
+  </footer>
 
+</div>
 
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  }
 
+  // Load saved theme
+  (function () {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") {
+      document.body.classList.add("dark");
+    }
+  })();
+</script>
 
-
+</body>
+</html>
